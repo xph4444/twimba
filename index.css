@@ -1,0 +1,201 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* typography and icons */
+
+h1 {
+    color: #0F8CDF;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-solid {
+    color: #999;
+}
+
+.liked {
+    color: red;
+}
+
+.retweeted {
+    color: limegreen;
+}
+
+.trash {
+    color: #111111
+}
+
+/* layout */
+
+main,
+header {
+    width: 290px;
+    margin: 0 auto;
+}
+
+header {
+    padding-bottom: 25px;
+}
+
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* textareas + btn */
+
+textarea {
+    border: none;
+    resize: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.regular-text {
+    font-size: 14px;
+
+}
+
+button,
+.button-small {
+    background-color: #1DA1F2;
+    border: none;
+    color: white;
+    border-radius: 20px;
+
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button-large {
+    width: 100%;
+    padding: 10px 19px;
+    font-size: 20px;
+}
+
+.button-small {
+    /* width: auto; */
+    padding: 8px 16px;
+    font-size: 14px;
+
+}
+
+
+.align-right {
+    text-align: right;
+    /* gap: 22px; */
+
+}
+
+.align-right textarea {
+    margin-bottom: 8px;
+    /* 调整<textarea>元素的下边距 */
+}
+
+.align-right button {
+    /* margin-top: 4px; */
+    /* 调整<button>元素的上边距 */
+}
+
+
+/* tweet */
+
+.tweet {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin: 15px 0;
+}
+
+
+.tweet-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.tweet-details {
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    /* width: 160px; */
+    /* width: auto; */
+    position: relative;
+}
+
+
+.tweet-detail {
+    display: flex;
+    /* flex: 1; */
+    gap: 4px;
+
+}
+
+.tweet-detail.delete-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+/* ChatGPT: 用于在鼠标悬停在具有 tweet 类的元素上时，改变该元素内部具有 hidden 类的 tweet-detail 元素的显示属性。 */
+/* 在被hover的类名为tweet的元素内部，选择类名为tweet-detail且类名还包括delete-icon的元素。 */
+.tweet:hover .tweet-detail.hidden {
+    display: flex;
+}
+
+
+.tweet-reply {
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.tweet-text {
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* images */
+
+.profile-pic {
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 48px;
+}
+
+/* utility */
+.hidden {
+    display: none;
+}
+
+.placeholder {
+    visibility: hidden;
+}
+
+.autofocus {
+    autofocus;
+}
